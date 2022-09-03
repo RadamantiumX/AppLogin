@@ -51,14 +51,15 @@
                 </a>
             </div>
             <!--Login FACEBOOK-->
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v14.0&appId=594866088789238&autoLogAppEvents=1" nonce="NBqdtYJz"></script>
-            <div class="flex items-center justify-end mt-4"> 
-            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true">
-                <a href="{{ url('auth/facebook') }}" class="btn btn-primary">Ingresar con FacebookS</a>   
+            
+            
+            <div class="flex items-center justify-end mt-4">
+                <a href="{{ url('auth/facebook') }}" class="btn btn-primary">
+                    
+                </a>   
             </div>                         
                              
-            </div>
+           
 
         </form>
     </x-jet-authentication-card>
