@@ -42,12 +42,22 @@
     </div>
     </div>
     <div class="py-12">
+        <style>
+            form{
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <h3>Dejanos los detalles, nos vamos a estar comunicando con vos para ofrecerte todas las opciones que mas te convengan</h3>
           <form>
+            @csrf
+            <label for="">Email</label>
             <input type="text">
+            <label for="">Celular</label>
             <input type="text">
+            <label for="">Que estas pensando para tu proximo sitio web?</label>
             <textarea name="" id="" cols="30" rows="10"></textarea>
             <input type="submit">
           </form>

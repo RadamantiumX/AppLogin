@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\ComentariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,8 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 
 Route::get('auth/facebook',[FacebookController::class,'redirect']);
 Route::get('auth/facebook/callback',[FacebookController::class,'callback']);
+
+Route::resource('comentarios',ComentariosController::class);
 
 Route::get('/', function () {
     return view('welcome');
