@@ -18,8 +18,7 @@ use App\Http\Controllers\ComentariosController;
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
-Route::get('auth/facebook',[FacebookController::class,'redirect']);
-Route::get('auth/facebook/callback',[FacebookController::class,'callback']);
+
 
 Route::resource('comentarios',ComentariosController::class);
 
