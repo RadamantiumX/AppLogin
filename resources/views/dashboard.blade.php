@@ -54,7 +54,7 @@
           <form>
             @csrf
             <label for="">Email</label>
-            <input type="email" required max="50">
+            <input type="email" required max="50" value="{{ Auth::user()->email }}">
             <label for="">Celular</label>
             <input type="text" required max="30">
             <label for="">Que estas pensando para tu proximo sitio web?</label>

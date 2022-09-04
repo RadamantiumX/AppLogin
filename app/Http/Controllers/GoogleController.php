@@ -18,8 +18,8 @@ class GoogleController extends Controller
 
     public function handleGoogleCallback()
     {
-        
-            $user = Socialite::driver('google')->user();
+        try{
+            $user = Socialite::driver('google')->stateless()->user();
             $finduser = User::where('google_id', $user->id)->first();
 
             if($finduser)
@@ -38,6 +38,8 @@ class GoogleController extends Controller
 
                 return redirect()->intended('dashboard');
             }
-        
+        }catch(Exception $e){
+             dd($e->getMessage());
+        }
     }
 }
