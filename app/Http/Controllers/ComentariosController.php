@@ -33,6 +33,8 @@ class ComentariosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
+    //METODO DE INSERCION DE ELEMENTOS EN LA TABLA
     public function store(Request $request)
     {
         $request->validate([
@@ -44,6 +46,7 @@ class ComentariosController extends Controller
         $comentario->email = $request->email;
         $comentario->celular = $request->celular;
         $comentario->comentario = $request->comentario;
+        //CLAVE FORANEA de la tabla USERS
         $comentario->user_id = $request->user_id;
 
         $comentario->save();

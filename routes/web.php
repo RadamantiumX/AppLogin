@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleController;
-use App\Http\Controllers\FacebookController;
+
 use App\Http\Controllers\ComentariosController;
 
 /*
@@ -15,13 +15,15 @@ use App\Http\Controllers\ComentariosController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Rutas autentificacion de GOOGLE
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 
-
+//Referenciamos todas las RUTAS de COMENTARIOS. Nos ahorramos de definir una por una
 Route::resource('comentarios',ComentariosController::class);
 
+//Insertamos los elementos en la tabla COMENTARIOS
 Route::post('/dashboard',[ComentariosController::class,'store'])->name('comentarios');
 
 Route::get('/', function () {
