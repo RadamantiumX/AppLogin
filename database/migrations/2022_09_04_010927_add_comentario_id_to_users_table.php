@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->bigInteger('comentario_id')->unsigned()->nullable();
+            $table
+                ->foreign('comentario_id')
+                ->references('id')
+                ->on('comentarios')
+                ->after('password');
         });
     }
 
