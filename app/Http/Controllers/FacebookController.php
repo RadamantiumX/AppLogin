@@ -17,8 +17,7 @@ class FacebookController extends Controller
 
     public function callback()
     {
-        try
-        {
+        
             $user = Socialite::driver('facebook')->user();
             $finduser = User::where('facebook_id',$user->id)->first();
 
@@ -37,9 +36,7 @@ class FacebookController extends Controller
 
                 return redirect()->intended('dashboard');
             }
-        }catch(Exception $e){
-            dd($e->getMessage());
-        }
+       
         
     }
 }
