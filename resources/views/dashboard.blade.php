@@ -54,11 +54,11 @@
           <form>
             @csrf
             <label for="">Email</label>
-            <input type="text">
+            <input type="email" required max="50">
             <label for="">Celular</label>
-            <input type="text">
+            <input type="text" required max="30">
             <label for="">Que estas pensando para tu proximo sitio web?</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="30" rows="10" max=50></textarea>
             <input type="submit">
           </form>
        </div> 

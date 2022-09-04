@@ -52,12 +52,7 @@
             </div>
             <!--Login FACEBOOK-->
             
-            
-            <div class="flex items-center justify-end mt-4">
-                <a href="{{ url('auth/facebook') }}" class="btn btn-primary">
-                    
-                </a>   
-            </div>                         
+                                     
                              
            
 
