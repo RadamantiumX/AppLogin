@@ -44,10 +44,11 @@ class ComentariosController extends Controller
         $comentario->email = $request->email;
         $comentario->celular = $request->celular;
         $comentario->comentario = $request->comentario;
+        $comentario->user_id = $request->user_id;
 
         $comentario->save();
 
-        return redirect()->route('dashboard')->whit('success','Mensaje enviado satisfactoriamente...');
+        return redirect()->route('dashboard')->with('success','Mensaje enviado satisfactoriamente...');
     }
 
     /**
