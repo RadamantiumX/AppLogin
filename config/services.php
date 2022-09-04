@@ -18,11 +18,7 @@ return [
         'provider' => 'users',
         'hash' => false,
     ],
-    'facebook'=>[
-        'client_id'=>env('FACEBOOK_OAUTH_ID'),
-        'client_secret'=>env('FACEBOOK_OAUTH_SECRET'),
-        'redirect'=>'http://localhost:8000/auth/facebook/callback',
-    ],
+    
     'google'=>[
         'client_id' => env('GOOGLE_OAUTH_ID'),
         'client_secret' => env('GOOGLE_OAUTH_KEY'),
