@@ -40,7 +40,7 @@ class ComentariosController extends Controller
             'celular' => 'required|min:8',
             'comentario' => 'required'
         ]);
-        $comentario = new Comentario;
+        $comentario = new Comentario();
         $comentario->email = $request->email;
         $comentario->celular = $request->celular;
         $comentario->comentario = $request->comentario;
