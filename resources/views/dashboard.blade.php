@@ -51,8 +51,11 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <h3>Dejanos los detalles, nos vamos a estar comunicando con vos para ofrecerte todas las opciones que mas te convengan</h3>
+            
+            <!--Formulario de COMENTARIOS-->
           <form action="{{ route('comentarios') }}" method="POST">
             @csrf
+            <!--Mensaje de INSERCION exitosa-->
             @if(session('success'))
               <h6 class="alert alert-success">{{ session('success') }}</h6>
             @endif
@@ -65,6 +68,7 @@
             <input name="user_id" type="hidden" value="{{ Auth::user()->id }}">
             <input type="submit">
           </form>
+
        </div> 
     </div>
     </div>
