@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comentario;
 use Illuminate\Http\Request;
 
 class ComentariosController extends Controller
@@ -35,8 +36,18 @@ class ComentariosController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            
-        ])
+            'email' => 'required',
+            'celular' => 'required|min:8',
+            'comentario' => 'required'
+        ]);
+        $comentario = new Comentario;
+        $comentario->email = $request->email;
+        $comentario->celular = $request->celular;
+        $comentario->comentario = $request->comentario;
+
+        $comentario->save();
+
+        return redirect()->route('dashboard')->whit('success','Mensaje enviado satisfactoriamente...');
     }
 
     /**
