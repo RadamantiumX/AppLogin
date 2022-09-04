@@ -22,6 +22,8 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 
 Route::resource('comentarios',ComentariosController::class);
 
+Route::post('/dashboard',[ComentariosController::class,'store'])->name('comentarios');
+
 Route::get('/', function () {
     return view('welcome');
 });
