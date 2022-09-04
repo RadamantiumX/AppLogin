@@ -57,11 +57,11 @@
               <h6 class="alert alert-success">{{ session('success') }}</h6>
             @endif
             <label for="">Email</label>
-            <input type="email" required max="50" value="{{ Auth::user()->email }}">
+            <input type="email" name="email" required max="50" value="{{ Auth::user()->email }}">
             <label for="">Celular</label>
-            <input type="text" required max="30">
+            <input type="text" name="celular" required max="30">
             <label for="">Que estas pensando para tu proximo sitio web?</label>
-            <textarea name="" id="" cols="30" rows="10" max=50></textarea>
+            <textarea name="comentario" id="" cols="30" rows="10" max=50></textarea>
             <input type="submit">
           </form>
        </div> 
