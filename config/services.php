@@ -13,11 +13,7 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
-    'api' => [
-        'driver' => 'passport',//instead of token 
-        'provider' => 'users',
-        'hash' => false,
-    ],
+ 
     
     'google'=>[
         'client_id' => env('GOOGLE_OAUTH_ID'),
