@@ -14,4 +14,6 @@ class Comentario extends Model
         'celular',
         'comentario',
     ];
+
+   
 }
