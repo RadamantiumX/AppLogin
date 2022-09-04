@@ -62,6 +62,7 @@
             <input type="text" name="celular" required max="30">
             <label for="">Que estas pensando para tu proximo sitio web?</label>
             <textarea name="comentario" id="" cols="30" rows="10" max=50></textarea>
+            <input name="user_id" type="hidden" value="{{ Auth::user()->id }}">
             <input type="submit">
           </form>
        </div> 
