@@ -51,8 +51,11 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <h3>Dejanos los detalles, nos vamos a estar comunicando con vos para ofrecerte todas las opciones que mas te convengan</h3>
-          <form action="" method="POST">
+          <form action="{{ route('comentarios') }}" method="POST">
             @csrf
+            @if(session('success'))
+              <h6 class="alert alert-success">{{ session('success') }}</h6>
+            @endif
             <label for="">Email</label>
             <input type="email" required max="50" value="{{ Auth::user()->email }}">
             <label for="">Celular</label>
