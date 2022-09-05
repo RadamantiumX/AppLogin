@@ -21,6 +21,12 @@ return [
         'redirect' => 'http://localhost:8000/auth/google/callback',
     ],
 
+    'godaddy'=>[
+        'client_id' => env('GODADDY_ID'),
+        'client_secret' => env('GODADDY_KEY'),
+        'redirect' => 'http://localhost:8000/auth/google/callback',
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
