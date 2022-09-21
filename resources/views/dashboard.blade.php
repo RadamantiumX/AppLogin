@@ -57,7 +57,9 @@
             @csrf
             <!--Mensaje de INSERCION exitosa-->
             @if(session('success'))
-              <h6 class="alert alert-success">{{ session('success') }}</h6>
+              <script>
+                alert("{{ session('success') }}");
+              </script>
             @endif
             <label for="">Email</label>
             <input type="email" name="email" required max="50" value="{{ Auth::user()->email }}">

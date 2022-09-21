@@ -14,11 +14,21 @@ return [
     |
     */
  
-    
+    'facebook'=>[
+        'client_id'=>env('FACEBOOK_CLIENT_ID'),
+        'client_secret'=>env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+    ],
     'google'=>[
         'client_id' => env('GOOGLE_OAUTH_ID'),
         'client_secret' => env('GOOGLE_OAUTH_KEY'),
-        'redirect' => 'http://localhost:8000/auth/google/callback',
+        'redirect' => 'http://localhost:8000/auth/google/callback'
+    ],
+    'google_domain'=>[
+        'base_uri'=>env('DOMAIN_BASE_URI'),
+        'api_key'=>env('DOMAIN_API_KEY'),
+        'secret'=>env('DOMAIN_SECRET'),
+        'class'=>App\Services\GoogleDomainService::class,
     ],
 
     'mailgun' => [
@@ -37,6 +47,5 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-  
 
 ];

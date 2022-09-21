@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\FacebookController;
+
 
 use App\Http\Controllers\ComentariosController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +21,13 @@ use App\Http\Controllers\ComentariosController;
 //Rutas autentificacion de GOOGLE
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+//Reemplazo
+//Route::prefix('google')->name('google.')->group( function(){
+   //Route::get('login',[GoogleController::class,'loginWithGoogle'])->name('login');
+   //Route::any('callback',[GoogleController::class,'callbackFromGoogle'])->name('callback');
+
+//});
 
 
 //Referenciamos todas las RUTAS de COMENTARIOS. Nos ahorramos de definir una por una
@@ -40,11 +50,10 @@ Route::middleware([
     })->name('dashboard');
 });
 
-
-
-
-
-
+Route::controller(FacebookController::class)->group(function(){
+    Route::get('auth/facebook','redirectToFacebook')->name('auth.facebook');
+    Route::get('auth/facebook/callback','handleFacebookCallback');
+});
 
 
 
