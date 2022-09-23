@@ -39,10 +39,15 @@
                     @endauth
                 </div>
             @endif
-           
-           
-        
-        
+
+
+        <div>
+            <form action="{{ route('domain') }}" method="post">
+                <input type="text" placeholder="Escriba su dominio">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+
 
     </body>
 </html>

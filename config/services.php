@@ -13,6 +13,9 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
+    'domain'=>[
+        'url'=>'https://domain-checker7.p.rapidapi.com',
+    ],
 
     'facebook'=>[
         'client_id'=>env('FACEBOOK_CLIENT_ID'),

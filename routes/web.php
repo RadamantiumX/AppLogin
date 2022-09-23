@@ -6,7 +6,7 @@ use App\Http\Controllers\FacebookController;
 
 
 use App\Http\Controllers\ComentariosController;
-
+use App\Http\Controllers\DomainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +55,7 @@ Route::controller(FacebookController::class)->group(function(){
     Route::get('auth/facebook/callback','handleFacebookCallback');
 });
 
+Route::get('/whois',[DomainController::class,'whoisDetails'])->name('domain');
 
 
 
