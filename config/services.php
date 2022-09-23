@@ -13,7 +13,7 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
- 
+
     'facebook'=>[
         'client_id'=>env('FACEBOOK_CLIENT_ID'),
         'client_secret'=>env('FACEBOOK_CLIENT_SECRET'),
@@ -24,12 +24,7 @@ return [
         'client_secret' => env('GOOGLE_OAUTH_KEY'),
         'redirect' => 'http://localhost:8000/auth/google/callback'
     ],
-    'google_domain'=>[
-        'base_uri'=>env('DOMAIN_BASE_URI'),
-        'api_key'=>env('DOMAIN_API_KEY'),
-        'secret'=>env('DOMAIN_SECRET'),
-        'class'=>App\Services\GoogleDomainService::class,
-    ],
+
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),

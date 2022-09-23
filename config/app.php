@@ -197,8 +197,7 @@ return [
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
 
-        //Provider de google
-        App\Providers\GoogleDriveServiceProvider::class,
+
 
     ],
 
