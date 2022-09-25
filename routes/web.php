@@ -55,7 +55,7 @@ Route::controller(FacebookController::class)->group(function(){
     Route::get('auth/facebook/callback','handleFacebookCallback');
 });
 
-Route::post('/domain/details',[DomainController::class,'details'])->name('details');
+Route::post('/',[DomainController::class,'details'])->name('details');
 
 
 

@@ -10,19 +10,12 @@ use Illuminate\Http\Request;
 class DomainController extends Controller
 {
 
-
-    protected $url;
-
-    public function __construct()
+    public function details(Request $request)
     {
-        $this->url = config('services.domain.url');
-    }
-
-    public function details(Request $request){
 
        $domain = $request->input('domain');
 
-       $response = Http::withHeaders([
+       $responses = Http::withHeaders([
          'accept'=> 'application/json',
          'Authorization'=>'sso-key UzQxLikm_46KxDFnbjN7cQjmw6wocia:46L26ydpkwMaKZV6uVdDWe',
          'Content-Type'=>'application/json',
@@ -31,12 +24,15 @@ class DomainController extends Controller
            $domain
        ])->json()['domains'];
 
-       dump($response);
+       //dump($responses);
 
        return view('welcome',[
-       'response'=>$response,
-       ]
-    );
-    }
+       'responses' => $responses
+       ]);
 
+
+    }
+    public function suggest(){
+
+    }
 }

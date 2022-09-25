@@ -45,9 +45,24 @@
 
                 <form action="{{ route('details') }}" method="POST">
                     @csrf
-                    <input type="text" name="domain" placeholder="escriba su dominio">
+                    <input type="text" name="domain" placeholder="escriba su dominio: ejemplo.com">
                     <input type="submit" value="enviar">
+
                 </form>
+                @foreach ($responses as $response)
+                 <div>
+                    @if ($response['available'] == 'true')
+                    <div>Dominio {{ $response['domain'] }} disponible</div>
+                    <a href="https://ar.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck={{ $response['domain'] }}">Comprar (se redireccionará a GoDaddy.com)</a>
+                    @else
+                    <div>Dominio no disponible</div>
+
+                    @endif
+                 </div>
+
+                @endforeach
+
+
 
         </div>
 
