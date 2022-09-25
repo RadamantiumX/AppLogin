@@ -42,10 +42,13 @@
 
 
         <div>
-            <form action="{{ route('domain') }}" method="post">
-                <input type="text" placeholder="Escriba su dominio">
-                <input type="submit" value="Buscar">
-            </form>
+
+                <form action="{{ route('details') }}" method="POST">
+                    @csrf
+                    <input type="text" name="domain" placeholder="escriba su dominio">
+                    <input type="submit" value="enviar">
+                </form>
+
         </div>
 
 

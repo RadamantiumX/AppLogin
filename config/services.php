@@ -14,7 +14,7 @@ return [
     |
     */
     'domain'=>[
-        'url'=>'https://domain-checker7.p.rapidapi.com',
+        'url'=>'https://domain-checker7.p.rapidapi.com/whois',
     ],
 
     'facebook'=>[
